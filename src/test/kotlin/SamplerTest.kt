@@ -30,8 +30,8 @@ class SamplerTest {
     }
 
     private fun expectValidResult(result: Map<MeasurementType, List<Measurement>>) {
-        assertEquals(2, result.size)
-        assertEquals(setOf(MeasurementType.SPO2, MeasurementType.TEMP), result.keys)
+        assertEquals(3, result.size)
+        assertEquals(setOf(MeasurementType.SPO2, MeasurementType.TEMP, MeasurementType.LD), result.keys)
         assertEquals(2, result[MeasurementType.TEMP]?.size)
         val firstTempSample = result[MeasurementType.TEMP]?.get(0)
         val secondTempSample = result[MeasurementType.TEMP]?.get(1)
@@ -45,6 +45,9 @@ class SamplerTest {
         assertEquals(95.08, secondSpo2Sample?.value)
         assertEquals(expectedTstampSample1, firstSpo2Sample?.tstamp)
         assertEquals(expectedTstampSample2, secondSpo2Sample?.tstamp)
+        val firstLdSample = result[MeasurementType.LD]?.get(0)
+        assertEquals(1, result[MeasurementType.LD]?.size)
+        assertEquals(95.08, firstLdSample?.value)
     }
 
     @Test
@@ -94,6 +97,16 @@ class SamplerTest {
             val result = underTest.sample(testStartDate!!, it)
             assertEquals(1, result.size)
             assertEquals(98.00, result[MeasurementType.SPO2]?.get(0)?.value)
+        }
+    }
+
+    @Test
+    fun `only single simple in each bucket`() = runTest {
+        repo.getMedicalDeviceData(SAME_VALUE_BUCKETS_FILE_NAME).collect {
+            val result = underTest.sample(testStartDate!!, it)
+            assertEquals(1, result.size)
+            assertEquals(setOf(MeasurementType.TEMP), result.keys)
+            assertEquals(3, result[MeasurementType.TEMP]?.size)
         }
     }
 }

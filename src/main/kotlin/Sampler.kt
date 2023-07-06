@@ -46,12 +46,16 @@ class Sampler(private val interval: Int) {
 
                 if (target.tstamp.time > currentBucket) {
                     rasterize.addSample(cachedItem, currentBucket)
-                    cachedItem = null
+                    cachedItem = target
                     currentBucket += interval
                 }
 
                 if (!it.hasNext()) {
-                    rasterize.addSample(target, currentBucket)
+                    if (rasterize.size == 0) {
+                        rasterize.addSample(target, currentBucket)
+                    } else if (rasterize.last() != target) {
+                        rasterize.addSample(target, currentBucket)
+                    }
                 }
             }
         }

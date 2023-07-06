@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc85fcfc-02b3-451c-9f0f-e8329e368d27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/single_value_buckets_input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Sampler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Sampler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/Measurement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Measurement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/MeasurementMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/MeasurementMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/SamplerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/SamplerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/valid_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/valid_input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,19 +63,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/p72b/code/Sampler",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/p72b/code/Sampler/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\p72b\code\Sampler\src\test\resources" />
       <recent name="C:\Users\p72b\code\draeger-test\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -81,7 +88,7 @@
       <recent name="usecase" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="JUnit.SamplerTest">
     <configuration name="SamplerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -101,40 +108,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SamplerTest.sample start date in past will return snapshot data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SamplerTest.sample start date in past will return valid sampling data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SamplerTest" />
-      <option name="METHOD_NAME" value="sample start date in past will return snapshot data" />
+      <option name="METHOD_NAME" value="sample start date in past will return valid sampling data" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SamplerTest.sample start date to far in future will not return data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SamplerTest.valid sampling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SamplerTest" />
-      <option name="METHOD_NAME" value="sample start date to far in future will not return data" />
+      <option name="METHOD_NAME" value="valid sampling" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <module name="untitled.main" />
+    <configuration name="SamplerTest.will skip not readable lines" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SamplerTest" />
+      <option name="METHOD_NAME" value="will skip not readable lines" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="JUnit.SamplerTest" />
-        <item itemvalue="JUnit.SamplerTest.sample start date in past will return snapshot data" />
-        <item itemvalue="JUnit.SamplerTest.sample start date to far in future will not return data" />
+        <item itemvalue="JUnit.SamplerTest.will skip not readable lines" />
         <item itemvalue="JUnit.SamplerTest.integer value input will be converted to double" />
+        <item itemvalue="JUnit.SamplerTest.valid sampling" />
+        <item itemvalue="JUnit.SamplerTest.sample start date in past will return valid sampling data" />
       </list>
     </recent_temporary>
   </component>
@@ -150,10 +160,22 @@
     <servers />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/SamplerTest.kt</url>
+          <line>32</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JetRunConfigurationType">
         <watch expression="((java.util.ArrayList)((LinkedHashMap.Entry)((LinkedHashMap)result).entrySet().toArray()[0]).getValue()).get(1)" custom="java.util.LinkedHashMap,java.util.LinkedHashMap.Entry,java.util.ArrayList" />
         <watch expression="((java.util.ArrayList)((LinkedHashMap.Entry)((LinkedHashMap)result).entrySet().toArray()[0]).getValue()).get(1)" custom="java.util.LinkedHashMap,java.util.LinkedHashMap.Entry,java.util.ArrayList" />
+      </configuration>
+      <configuration name="JUnit">
+        <watch expression="((java.util.ArrayList)((LinkedHashMap.Entry)((LinkedHashMap)result).entrySet().toArray()[2]).getValue()).get(1)" custom="java.util.LinkedHashMap,java.util.LinkedHashMap.Entry,java.util.ArrayList" />
       </configuration>
     </watches-manager>
   </component>

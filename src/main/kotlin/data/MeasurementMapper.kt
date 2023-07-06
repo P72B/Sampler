@@ -32,6 +32,7 @@ class MeasurementMapper : Mapper<String, Measurement?> {
             MeasurementType.HR.name -> MeasurementType.HR
             MeasurementType.SPO2.name -> MeasurementType.SPO2
             MeasurementType.TEMP.name -> MeasurementType.TEMP
+            MeasurementType.LD.name -> MeasurementType.LD
             else -> null
         }
     }
